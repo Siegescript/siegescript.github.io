@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
 import Background from './sections/Background'
+import Skills from './sections/Skills'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <main className="space-y-12">
         <Hero/>
         <Background/>
+        <Skills/>
       </main>
     </div>
   ) 
