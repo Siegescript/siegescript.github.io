@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
+import Hero from './sections/Hero'
 import Background from './sections/Background'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       
       <Navbar />
       <main className="space-y-12">
+        <Hero/>
         <Background/>
       </main>
     </div>
