@@ -4,6 +4,7 @@ import Hero from './sections/Hero'
 import Background from './sections/Background'
 import Skills from './sections/Skills'
 import Projects from './sections/Projects'
+import Contact from './sections/Contact'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Background/>
         <Projects/>
         <Skills/>
+        <Contact/>
       </main>
     </div>
   ) 
