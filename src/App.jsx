@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
 import Background from './sections/Background'
 import Skills from './sections/Skills'
+import Projects from './sections/Projects'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <main className="space-y-12">
         <Hero/>
         <Background/>
+        <Projects/>
         <Skills/>
       </main>
     </div>
