@@ -46,7 +46,7 @@ function Background() {
 
                 {/* Right Graphic Column */}
                 <div className="flex flex-col items-center justify-center">
-                    <img src={photo} alt="Developer Illustration" className="w-48 h-auto" />
+                    <img src={photo} alt="Developer Illustration" className="w-48 h-auto object-cover grayscale hover:grayscale-0 transition duration-500"/>
                     <div className="mt-4 border border-white-400 p-2 flex items-center gap-2 text-xs bg-black">
                         <span className="w-3 h-3 bg-[#cb6ce6] inline-block animate-pulse"/>
                         <span>Working on: <span className="text-gray-400">Web Portfolio</span></span>
