@@ -1,3 +1,5 @@
+import React from "react";
+
 const PROJECT_DATA = [
     {
         title: "work in progress",

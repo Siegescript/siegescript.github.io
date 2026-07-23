@@ -1,3 +1,5 @@
+import React from "react";
+
 function Navbar() {
   const links = ['home', 'background', 'projects', 'skills', 'contact'];
   
