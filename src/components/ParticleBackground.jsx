@@ -23,8 +23,9 @@ function ParticleBackground() {
                 <Particles
                     id="tsparticles"
                     particlesLoaded={particlesLoaded}
-                    className="absolute inset-0 -z-10 pointer-events-none"
+                    className="fixed inset-0 w-full h-full pointer-events-none z-0"
                     options={{
+                        // Explicitly paint a transparent canvas layer
                         background: { color: { value: "transparent" } },
                         fpsLimit: 120,
                         interactivity: {
@@ -46,18 +47,18 @@ function ParticleBackground() {
                             },
                             move: {
                                 enable: true,
-                                speed: 0.8, // Slow, ambient movement
+                                speed: 0.8,
                                 direction: "none",
                                 random: false,
                                 straight: false,
                                 outModes: { default: "bounce" },
                             },
                             number: {
-                                value: 40, // Keeps it sparse and non-distracting
+                                value: 40,
                                 density: { enable: true, bounds: { width: 1920, height: 1080 } },
                             },
                             opacity: { value: { min: 0.1, max: 0.4 } },
-                            shape: { type: "polygon", options: { polygon: { sides: 6 } } }, // Hexagonal node links
+                            shape: { type: "polygon", options: { polygon: { sides: 6 } } },
                             size: { value: { min: 1, max: 3 } },
                         },
                         detectRetina: true,

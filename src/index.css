@@ -4,9 +4,12 @@
 @layer base {
   body {
     font-family: 'Fira Code', monospace;
-    background-color: #000000;
+    /* REMOVED background-color: #000000; so it doesn't block underlying layers */
     color: #ffffff;
   }
 }
 
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: smooth; 
+  background-color: #000000; /* Sets the window background to true black */
+}
