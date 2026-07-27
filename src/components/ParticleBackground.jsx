@@ -1,72 +1,79 @@
-import React, { useEffect, useState } from "react";
-import Particles from "@tsparticles/react";
-import { tsParticles } from "@tsparticles/engine"; 
+import React, { useMemo } from "react";
+import Particles, { ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
+// 1. Define the engine initializer outside the component
+const particlesInit = async (engine) => {
+    await loadSlim(engine);
+};
+
 function ParticleBackground() {
-    const [init, setInit] = useState(false);
+    // 2. Memoize options so tsParticles doesn't re-create the canvas on every render
+    const options = useMemo(
+        () => ({
+            background: {
+                color: { value: "transparent" },
+            },
+            fpsLimit: 120,
+            interactivity: {
+                events: {
+                    onHover: {
+                        enable: true,
+                        mode: "grab",
+                    },
+                },
+                modes: {
+                    grab: {
+                        distance: 150,
+                        links: { opacity: 0.5 },
+                    },
+                },
+            },
+            particles: {
+                color: { value: "#cb6ce6" },
+                links: {
+                    color: "#cb6ce6",
+                    distance: 150,
+                    enable: true,
+                    opacity: 0.3,
+                    width: 1,
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    outModes: { default: "bounce" },
+                },
+                number: {
+                    value: 60,
+                    density: { enable: true },
+                },
+                opacity: {
+                    value: { min: 0.3, max: 0.7 },
+                },
+                shape: {
+                    type: "polygon",
+                    options: { polygon: { sides: 6 } },
+                },
+                size: {
+                    value: { min: 2, max: 4 },
+                },
+            },
+            detectRetina: true,
+        }),
+        []
+    );
 
-    useEffect(() => {
-        loadSlim(tsParticles).then(() => {
-            setInit(true);
-        });
-    }, []);
-
-    const particlesLoaded = (container) => {
-        console.log("Particles container loaded", container);
-    };
-
-    return(
-        <>
-        {
-            init && (
-                <Particles
-                    id="tsparticles"
-                    particlesLoaded={particlesLoaded}
-                    className="fixed inset-0 w-full h-full pointer-events-none z-0"
-                    options={{
-                        // Explicitly paint a transparent canvas layer
-                        background: { color: { value: "transparent" } },
-                        fpsLimit: 120,
-                        interactivity: {
-                            events: {
-                                onHover: { enable: true, mode: "grab" },
-                            },
-                            modes: {
-                                grab: { distance: 150, links: { opacity: 0.4 } },
-                            },
-                        },
-                        particles: {
-                            color: { value: "#cb6ce6" },
-                            links: {
-                                color: "#cb6ce6",
-                                distance: 150,
-                                enable: true,
-                                opacity: 0.15,
-                                width: 1,
-                            },
-                            move: {
-                                enable: true,
-                                speed: 0.8,
-                                direction: "none",
-                                random: false,
-                                straight: false,
-                                outModes: { default: "bounce" },
-                            },
-                            number: {
-                                value: 40,
-                                density: { enable: true, bounds: { width: 1920, height: 1080 } },
-                            },
-                            opacity: { value: { min: 0.1, max: 0.4 } },
-                            shape: { type: "polygon", options: { polygon: { sides: 6 } } },
-                            size: { value: { min: 1, max: 3 } },
-                        },
-                        detectRetina: true,
-                    }}
-                />
-            )
-        }
-        </>
+    return (
+        <ParticlesProvider init={particlesInit}>
+            <Particles
+                id="tsparticles"
+                className="fixed inset-0 w-full h-full pointer-events-none z-0"
+                options={options}
+            />
+        </ParticlesProvider>
     );
 }
 

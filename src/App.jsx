@@ -8,7 +8,7 @@ import Contact from './sections/Contact'
 
 function App() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden selection:bg-[#cb6ce6] selection:text-black">
+    <div className="relative min-h-screen bg-black overflow-x-hidden selection:bg-[#cb6ce6] selection:text-black">
       <ParticleBackground/>
       
       <div className="relative z-10 pointer-events-none">
