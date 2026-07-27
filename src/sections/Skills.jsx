@@ -1,5 +1,3 @@
-import React from "react";
-
 const SKILLS = [
     {id:"c", name:"c"},
     {id:"java", name:"java"},
@@ -13,21 +11,19 @@ const SKILLS = [
 
 function Skills(){
     return(
-        <section id='skills' className="py-20 max-w-5xl mx-auto px-6">
+        <section id='skills' className="py-24 max-w-7xl 2xl:max-w-screen-2xl mx-auto px-8 md:px-12">
             <div className="flex items-center gap-4 mb-16">
-                <h2 className="text-2xl font-bold text-[#cb6ce6]">&gt;skills</h2>
-                <div className="h-[1px] flex-grow bg-linear-to-r from-[#cb6ce6]/50 to-transparent" />
+                <h2 className="text-2xl md:text-3xl font-bold text-[#cb6ce6]">&gt; skills</h2>
+                <div className="h-[1px] flex-grow bg-gradient-to-r from-[#cb6ce6]/50 to-transparent" />
             </div>
 
-            {/*Grid*/}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-3xl mx-auto justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 justify-items-center">
                 {
                 SKILLS.map((skill)=>(
                     <div
                         key={skill.id}
-                        className="border border-gray-700 bg-black p-6 w-32 h-32 flex flex-col items-center justify-center gap-3 transition-colors hover:border-[#cb6ce6]/50 group"
+                        className="border border-gray-700 bg-black p-6 w-full h-36 flex flex-col items-center justify-center gap-3 transition-colors hover:border-[#cb6ce6] group"
                     >
-                    {/*Fetching skillicons.dev*/}
                         <img
                             src={`https://skillicons.dev/icons?i=${skill.id}`}
                             alt={`${skill.name} icon`}
