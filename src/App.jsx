@@ -1,3 +1,4 @@
+import React from 'react';
 import ParticleBackground from './components/ParticleBackground'
 import Navbar from './components/Navbar'
 import Hero from './sections/Hero'

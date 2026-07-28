@@ -1,3 +1,4 @@
+import React from "react";
 import Resume from "../assets/Resume.pdf";
 
 function Contact(){

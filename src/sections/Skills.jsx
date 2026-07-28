@@ -1,3 +1,5 @@
+import React from "react";
+
 const SKILLS = [
     {id:"c", name:"c"},
     {id:"java", name:"java"},

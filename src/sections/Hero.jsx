@@ -1,3 +1,4 @@
+import React from "react";
 import portrait from "../assets/aura.jpeg"
 
 function Hero() {
