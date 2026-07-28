@@ -16,7 +16,7 @@ function ProjectCard({ project }) {
                     {/* Future image/content for finished projects goes here */}
                     <span className="text-gray-500 text-sm">Project Graphic</span>
                 </div>
-            )};
+            )}
             
             <div className="border-b border-gray-700 px-4 py-2 text-xs md:text-sm text-gray-400">
                 {project.stack}
