@@ -1,7 +1,10 @@
 import React from "react";
+import portfolioData from "../data.json";
 import photo from "../assets/portrait.jpeg";
 
 function Background() {
+    const { education, employment } = portfolioData;
+
     return (
         <section id="background" className="py-24 max-w-7xl 2xl:max-w-screen-2xl mx-auto px-8 md:px-12">
             
@@ -21,16 +24,24 @@ function Background() {
           
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8">
                         <div>
-                            <h3 className="text-lg md:text-xl font-bold text-[#cb6ce6] mb-2">&gt;education</h3>
-                            <p className="font-bold text-white text-base md:text-lg">University of San Carlos</p>
-                            <p className="text-gray-400">BS. Computer Science,</p>
-                            <p className="text-gray-500 text-xs md:text-sm">Aug 2022 - May 2026</p>
+                            <h3 className="text-lg md:text-xl font-bold text-[#cb6ce6] mb-2">&gt; education</h3>
+                            {education.map((item, index) => (
+                            <div key={index} className="mb-4 last:mb-0">
+                                <p className="font-bold text-white text-base md:text-lg">{item.institution}</p>
+                                <p className="text-gray-400">{item.degree}</p>
+                                <p className="text-gray-500 text-xs md:text-sm">{item.date}</p>
+                            </div>
+                            ))}
                         </div>
                         <div>
-                            <h3 className="text-lg md:text-xl font-bold text-[#cb6ce6] mb-2">&gt;employment</h3>
-                            <p className="font-bold text-white text-base md:text-lg">Cebu Landmasters Inc.</p>
-                            <p className="text-gray-400">Digital Innovations Intern,</p>
-                            <p className="text-gray-500 text-xs md:text-sm">Sep 2025 - Jan 2026</p>
+                            <h3 className="text-lg md:text-xl font-bold text-[#cb6ce6] mb-2">&gt; employment</h3>
+                            {employment.map((item, index) => (
+                            <div key={index} className="mb-4 last:mb-0">
+                                <p className="font-bold text-white text-base md:text-lg">{item.company}</p>
+                                <p className="text-gray-400">{item.role}</p>
+                                <p className="text-gray-500 text-xs md:text-sm">{item.date}</p>
+                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
