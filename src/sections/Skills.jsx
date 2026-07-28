@@ -1,15 +1,5 @@
 import React from "react";
-
-const SKILLS = [
-    {id:"c", name:"c"},
-    {id:"java", name:"java"},
-    {id:"js", name:"javascript"},
-    {id:"py", name:"python"},
-    {id:"react", name:"reactjs"},
-    {id:"nodejs", name:"nodejs"},
-    {id:"mysql", name:"mysql"},
-    {id:"git", name:"git"},
-];
+import portfolioData from "../data.json"
 
 function Skills(){
     return(
@@ -20,23 +10,21 @@ function Skills(){
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 justify-items-center">
-                {
-                SKILLS.map((skill)=>(
-                    <div
-                        key={skill.id}
-                        className="border border-gray-700 bg-black p-6 w-full h-36 flex flex-col items-center justify-center gap-3 transition-colors hover:border-[#cb6ce6] group"
-                    >
-                        <img
-                            src={`https://skillicons.dev/icons?i=${skill.id}`}
-                            alt={`${skill.name} icon`}
-                            className="w-12 h-12 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                        />
-                        <span className="text-xs text-gray-400 font-mono group-hover:text-white">
-                            {skill.name}
-                        </span>
-                    </div>
-                ))
-                }
+                {portfolioData.skills.map((skill) => (
+                <div 
+                    key={skill.id} 
+                    className="border border-gray-700 bg-black p-6 w-full h-36 flex flex-col items-center justify-center gap-3 transition-colors hover:border-[#cb6ce6] group"
+                >
+                    <img 
+                        src={`https://skillicons.dev/icons?i=${skill.id}`} 
+                        alt={`${skill.name} icon`}
+                        className="w-12 h-12 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
+                    <span className="text-xs text-gray-400 font-mono group-hover:text-white">
+                        {skill.name}
+                    </span>
+                </div>
+                ))}
             </div>
         </section>
     );
