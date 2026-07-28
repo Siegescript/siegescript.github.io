@@ -1,0 +1,34 @@
+{
+  "education": [
+    {
+      "institution": "University of San Carlos",
+      "degree": "BS. Computer Science,",
+      "date": "Aug 2022 - May 2026"
+    }
+  ],
+  "employment": [
+    {
+      "company": "Cebu Landmasters Inc.",
+      "role": "Digital Innovations Intern,",
+      "date": "Sep 2025 - Jan 2026"
+    }
+  ],
+  "skills": [
+    { "id": "c", "name": "c" },
+    { "id": "java", "name": "java" },
+    { "id": "js", "name": "javascript" },
+    { "id": "py", "name": "python" },
+    { "id": "react", "name": "reactjs" },
+    { "id": "nodejs", "name": "nodejs" },
+    { "id": "mysql", "name": "mysql" },
+    { "id": "git", "name": "git" }
+  ],
+  "projects": [
+    {
+      "title": "work in progress",
+      "stack": "unknown stack",
+      "description": "first project coming soon!",
+      "isBuilding": true
+    }
+  ]
+}
