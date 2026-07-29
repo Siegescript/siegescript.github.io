@@ -57,7 +57,7 @@ function Background() {
                             <span className="absolute top-0 left-0 w-3 h-3 bg-cyan-400 z-10"></span>
                             <span className="absolute bottom-0 right-0 w-3 h-3 bg-pink-500 z-0"></span>
                         </div>
-                        <span>Working on: <span className="text-white">Web Portfolio</span></span>
+                        <span>Working on: <span className="text-white">Inventory System</span></span>
                     </div>
                 </div>
             </div>
