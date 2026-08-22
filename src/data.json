@@ -30,5 +30,27 @@
       "description": "first project coming soon!",
       "isBuilding": true
     }
+  ],
+  "socialLinks": [
+    {
+      "name": "Github",
+      "url": "https://github.com/Siegescript",
+      "iconName": "github"
+    },
+    {
+      "name": "Twitter / X",
+      "url": "https://twitter.com/stefan_lou4099",
+      "iconName": "twitter"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/siegescript/",
+      "iconName": "linkedin"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:stefanlouisduran@gmail.com",
+      "iconName": "email"
+    }
   ]
 }
