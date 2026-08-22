@@ -1,3 +1,4 @@
+import { Mail } from "lucide-react";
 import Resume from "../assets/StefanLouis_Duran_CV.pdf";
 
 function Contact(){
@@ -20,10 +21,12 @@ function Contact(){
                         <img src="https://skillicons.dev/icons?i=twitter" alt="Twitter" className="w-8 h-8 grayscale group-hover:grayscale-0 transition-all" />
                         <span className="text-lg md:text-xl font-mono">Twitter / X</span>
                     </a>
-                    <a href="mailto:stefanlouisduran@gmail.com" className="flex items-center gap-6 text-gray-300 hover:text-white transition-colors group">
-                        <svg className="w-8 h-8 text-gray-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
+                    <a href="https://www.linkedin.com/in/siegescript/" target="_blank" rel="noreferrer" className="flex items-center gap-6 text-gray-300 hover:text-white transition-colors group">
+                        <img src="https://skillicons.dev/icons?i=linkedin" alt="Linkedin" className="w-8 h-8 grayscale group-hover:grayscale-0 transition-all" />
+                        <span className="text-lg md:text-xl font-mono">Linkedin</span>
+                    </a>
+                    <a href="mailto:stefanlouisduran@gmail.com" className="flex items-center gap-6 text-gray-300 hover:text-white transition-colors">
+                        <Mail aria-hidden="true" className="w-8 h-8" strokeWidth={1.5} />
                         <span className="text-lg md:text-xl font-mono">Email</span>
                     </a>
                 </div>
