@@ -1,4 +1,4 @@
-import Resume from "../assets/Resume.pdf";
+import Resume from "../assets/StefanLouis_Duran_CV.pdf";
 
 function Contact(){
     return(
@@ -30,7 +30,7 @@ function Contact(){
 
                 {/*Resume Button*/}
                 <div>
-                    <a href={Resume} download="resume.pdf" className="border border-gray-500 hover:border-white text-white px-8 py-3 flex items-center gap-3 transition-colors text-base md:text-lg font-mono">
+                    <a href={Resume} download="StefanLouis_Duran_CV.pdf" className="border border-gray-500 hover:border-white text-white px-8 py-3 flex items-center gap-3 transition-colors text-base md:text-lg font-mono">
                         Resume
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
