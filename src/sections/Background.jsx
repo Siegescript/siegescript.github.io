@@ -1,4 +1,3 @@
-import React from "react";
 import portfolioData from "../data.json";
 import photo from "../assets/portrait.jpeg";
 

@@ -1,5 +1,3 @@
-import React from "react";
-
 function ProjectCard({ project }) {
     return (
         <div className="border border-gray-700 font-mono bg-black text-left transition-colors hover:border-[#cb6ce6]/50 w-full max-w-sm mx-auto md:max-w-none">
