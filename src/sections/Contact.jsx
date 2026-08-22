@@ -1,7 +1,23 @@
 import { Mail } from "lucide-react";
 import Resume from "../assets/StefanLouis_Duran_CV.pdf";
+import data from "../data.json";
 
 function Contact(){
+    const renderIcon = (iconName) => {
+        if(iconName === "email"){
+            return <Mail aria-hidden="true" className="w-8 h-8" strokeWidth={1.5} />
+        }
+
+        return (
+            <img 
+                src={`https://skillicons.dev/icons?i=${iconName}`} 
+                alt="" 
+                aria-hidden="true" 
+                className="w-8 h-8 grayscale group-hover:grayscale-0 transition-all" 
+            />
+        );
+    };
+
     return(
         <section id="contact" className="py-24 max-w-7xl 2xl:max-w-screen-2xl mx-auto px-8 md:px-12 mb-20">
             <div className="flex items-center gap-4 mb-12">
@@ -13,22 +29,18 @@ function Contact(){
 
                 {/*Social Links*/}
                 <div className="space-y-6">
-                    <a href="https://github.com/Siegescript" target="_blank" rel="noreferrer" className="flex items-center gap-6 text-gray-300 hover:text-white transition-colors group">
-                        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" className="w-8 h-8 grayscale group-hover:grayscale-0 transition-all" />
-                        <span className="text-lg md:text-xl font-mono">Github</span>
-                    </a>
-                    <a href="https://twitter.com/stefan_lou4099" target="_blank" rel="noreferrer" className="flex items-center gap-6 text-gray-300 hover:text-white transition-colors group">
-                        <img src="https://skillicons.dev/icons?i=twitter" alt="Twitter" className="w-8 h-8 grayscale group-hover:grayscale-0 transition-all" />
-                        <span className="text-lg md:text-xl font-mono">Twitter / X</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/siegescript/" target="_blank" rel="noreferrer" className="flex items-center gap-6 text-gray-300 hover:text-white transition-colors group">
-                        <img src="https://skillicons.dev/icons?i=linkedin" alt="Linkedin" className="w-8 h-8 grayscale group-hover:grayscale-0 transition-all" />
-                        <span className="text-lg md:text-xl font-mono">Linkedin</span>
-                    </a>
-                    <a href="mailto:stefanlouisduran@gmail.com" className="flex items-center gap-6 text-gray-300 hover:text-white transition-colors">
-                        <Mail aria-hidden="true" className="w-8 h-8" strokeWidth={1.5} />
-                        <span className="text-lg md:text-xl font-mono">Email</span>
-                    </a>
+                    {data.socialLinks.map((link) => (
+                        <a
+                            key={link.name}
+                            href={link.url}
+                            target={link.name === "Email" ? undefined : "_blank"}
+                            rel={link.name === "Email" ? undefined : "noopener noreferrer"}
+                            className="flex items-center gap-6 text-gray-300 hover:text-white transition-colors group"
+                        >
+                            {renderIcon(link.iconName)}
+                            <span className="text-lg md:text-xl font-mono">{link.name}</span>
+                        </a>
+                    ))}
                 </div>
 
                 {/*Resume Button*/}
