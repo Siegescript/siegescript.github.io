@@ -21,7 +21,7 @@ function Hero() {
         <img 
           src={portrait} 
           alt="Stefan Louis Duran" 
-          className="relative z-10 w-72 md:w-96 2xl:w-[420px] h-auto object-cover grayscale hover:grayscale-0 transition duration-500 border-2 border-black"
+          className="relative z-10 w-72 md:w-96 2xl:w-105 h-auto object-cover grayscale hover:grayscale-0 transition duration-500 border-2 border-black"
         />
       </div>
 

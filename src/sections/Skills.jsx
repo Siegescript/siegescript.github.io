@@ -5,7 +5,7 @@ function Skills(){
         <section id='skills' className="py-24 max-w-7xl 2xl:max-w-screen-2xl mx-auto px-8 md:px-12">
             <div className="flex items-center gap-4 mb-16">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#cb6ce6]">&gt; skills</h2>
-                <div className="h-[1px] flex-grow bg-gradient-to-r from-[#cb6ce6]/50 to-transparent" />
+                <div className="h-px grow bg-linear-to-r from-[#cb6ce6]/50 to-transparent" />
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 justify-items-center">

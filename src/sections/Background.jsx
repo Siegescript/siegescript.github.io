@@ -9,7 +9,7 @@ function Background() {
             
             <div className="flex items-center gap-4 mb-16">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#cb6ce6]">&gt; background</h2>
-                <div className="h-[1px] flex-grow bg-gradient-to-r from-[#cb6ce6]/50 to-transparent" />
+                <div className="h-px grow bg-linear-to-r from-[#cb6ce6]/50 to-transparent" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
