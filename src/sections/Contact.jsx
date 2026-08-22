@@ -42,19 +42,14 @@ function Contact(){
             {/*Quote Box*/}
             <div className="mt-32 flex justify-center px-4">
                 <div className="border border-gray-600 p-8 relative max-w-xl w-full">
-                    {/*Top Quote Mark*/}
-                    <span className="absolute -top-6 left-6 bg-black px-2 text-5xl text-white font-serif">"</span>
 
-                    <p className="text-white text-md md:text-lg mb-6 leading-relaxed">
+                    <p className="text-white text-md md:text-lg leading-relaxed">
                         An idiot admires complexity, a genius admires simplicity.
-                    </p>
-
-                    {/*Bottom Quote Mark*/}
-                    <span className="absolute -bottom-6 right-6 bg-black px-2 text-5xl text-white font-serif z-10">"</span>                  
+                    </p>                
 
                     {/*Name Tag*/}
-                    <div className="absolute -bottom-5 right-20 bg-black border border-gray-600 px-4 py-1 z-0">
-                        <p className="text-white text-xs">Terry A. Davis</p>
+                    <div className="absolute -bottom-5 right-20 bg-black border border-gray-600 px-3 py-2 z-0">
+                        <p className="text-white text-s">Terry A. Davis</p>
                     </div>
                 </div>
             </div>
