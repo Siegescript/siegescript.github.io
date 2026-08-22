@@ -1,20 +1,19 @@
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import Particles, { ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-// 1. Define the engine initializer outside the component
 const particlesInit = async (engine) => {
     await loadSlim(engine);
 };
 
 function ParticleBackground() {
-    // 2. Memoize options so tsParticles doesn't re-create the canvas on every render
     const options = useMemo(
         () => ({
             background: {
                 color: { value: "transparent" },
             },
-            fpsLimit: 120,
+            fpsLimit: 60,
+            pauseOnBlur: true,
             interactivity: {
                 events: {
                     onHover: {
@@ -35,30 +34,33 @@ function ParticleBackground() {
                     color: "#cb6ce6",
                     distance: 150,
                     enable: true,
-                    opacity: 0.3,
-                    width: 1,
+                    opacity: 0.4,
+                    width: 1.2,
                 },
                 move: {
                     enable: true,
-                    speed: 1,
+                    speed: 0.5,
                     direction: "none",
                     random: false,
                     straight: false,
                     outModes: { default: "bounce" },
                 },
                 number: {
-                    value: 60,
-                    density: { enable: true },
+                    value: 64,
+                    density: { 
+                        enable: true,
+                        width: 800
+                    },
                 },
                 opacity: {
-                    value: { min: 0.3, max: 0.7 },
+                    value: { min: 0.2, max: 0.8 },
                 },
                 shape: {
                     type: "polygon",
-                    options: { polygon: { sides: 6 } },
+                    options: { polygon: { sides: 6 } }
                 },
                 size: {
-                    value: { min: 2, max: 4 },
+                    value: { min: 1, max: 2.5 },
                 },
             },
             detectRetina: true,
@@ -77,4 +79,4 @@ function ParticleBackground() {
     );
 }
 
-export default ParticleBackground;
+export default React.memo(ParticleBackground);
