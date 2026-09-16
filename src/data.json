@@ -25,10 +25,22 @@
   ],
   "projects": [
     {
-      "title": "work in progress",
-      "stack": "unknown stack",
-      "description": "first project coming soon!",
-      "isBuilding": true
+      "title": "Thesis",
+      "stack": "Python / MarianMT / VADER / RoBERTa",
+      "description": "Co-Authored undergraduate Thesis: Multilingual Typhoon-Panic Classification Hybrid Model with Temporal Visualization.",
+      "link": "https://drive.google.com/drive/folders/1_MQziXUg_5vWw-NE-gi_MkaR1SlljqjK?usp=drive_link"
+    },
+    {
+      "title": "Express.JS REST API",
+      "stack": "Express.js / Passport / Sequelize / MySQL",
+      "description": "RESTful API template featuring request validation, session authentication, and database ORM integration.",
+      "link": "https://github.com/Siegescript/Express.js-API"
+    },
+    {
+      "title": "Data Structures & Algorithms",
+      "stack": "C",
+      "description": "[WIP] Reference notes and implementations for core data structures, algorithms, and complexities in C.",
+      "link": "https://github.com/Siegescript/Data-Structures-and-Algorithms"
     }
   ],
   "socialLinks": [
