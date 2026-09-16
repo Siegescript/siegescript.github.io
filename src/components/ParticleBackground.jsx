@@ -34,8 +34,8 @@ function ParticleBackground() {
                     color: "#cb6ce6",
                     distance: 150,
                     enable: true,
-                    opacity: 0.4,
-                    width: 1.2,
+                    opacity: 0.3,
+                    width: 1,
                 },
                 move: {
                     enable: true,
@@ -46,21 +46,17 @@ function ParticleBackground() {
                     outModes: { default: "bounce" },
                 },
                 number: {
-                    value: 32,
+                    value: 64,
                     density: { 
                         enable: true,
                         width: 800
                     },
                 },
                 opacity: {
-                    value: { min: 0.2, max: 0.8 },
-                },
-                shape: {
-                    type: "polygon",
-                    options: { polygon: { sides: 6 } }
+                    value: { min: 0.3, max: 0.7 },
                 },
                 size: {
-                    value: { min: 1, max: 2.5 },
+                    value: { min: 2, max: 4 },
                 },
             },
             detectRetina: true,
