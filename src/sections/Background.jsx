@@ -51,7 +51,7 @@ function Background() {
                         alt="Stefan Louis portrait" 
                         className="w-56 h-auto 2xl:w-64 2xl:h-auto object-cover border border-gray-700 grayscale hover:grayscale-0 transition duration-500"
                     />
-                    <div className="border border-gray-700 p-3 flex items-center gap-3 text-2xs md:text-xs bg-black w-56 2xl:w-64 justify-center">
+                    <div className="border border-gray-700 p-3 flex items-center gap-3 text-2xs md:text-xs bg-black w-56 2xl:w-64 justify-start">
                         <div className="relative w-4 h-4">
                             <span className="absolute top-0 left-0 w-3 h-3 bg-cyan-400 z-10"></span>
                             <span className="absolute bottom-0 right-0 w-3 h-3 bg-pink-500 z-0"></span>
