@@ -46,7 +46,7 @@ function ParticleBackground() {
                     outModes: { default: "bounce" },
                 },
                 number: {
-                    value: 64,
+                    value: 32,
                     density: { 
                         enable: true,
                         width: 800
