@@ -48,9 +48,7 @@ function Contact(){
                 <div>
                     <a href={Resume} download="StefanLouis_Duran_CV.pdf" className="border border-gray-500 hover:border-white text-white px-8 py-3 flex items-center gap-3 transition-colors text-base md:text-lg font-mono">
                         Resume
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <Download/>
-                        </svg>
+                        <Download/>
                     </a>
                 </div>
             </div>
