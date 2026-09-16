@@ -1,5 +1,5 @@
 import portfolioData from "../data.json";
-import photo from "../assets/portrait.jpeg";
+import portrait from "../assets/portrait.jpg";
 
 function Background() {
     const { education, employment } = portfolioData;
@@ -47,7 +47,7 @@ function Background() {
 
                 <div className="flex flex-col items-center justify-start space-y-6">
                     <img 
-                        src={photo} 
+                        src={portrait} 
                         alt="Stefan Louis portrait" 
                         className="w-56 h-auto 2xl:w-64 2xl:h-auto object-cover border border-gray-700 grayscale hover:grayscale-0 transition duration-500"
                     />

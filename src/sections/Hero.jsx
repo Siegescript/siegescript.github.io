@@ -1,4 +1,4 @@
-import portrait from "../assets/aura.jpeg"
+import aura from "../assets/aura.jpeg"
 
 function Hero() {
   return (
@@ -19,7 +19,7 @@ function Hero() {
       <div className="relative shrink-0 mt-12 md:mt-0">
         <div className="absolute top-4 -right-4 w-full h-full border-2 border-[#cb6ce6] z-0"></div>
         <img 
-          src={portrait} 
+          src={aura} 
           alt="Stefan Louis Duran" 
           className="relative z-10 w-72 md:w-96 2xl:w-105 h-auto object-cover grayscale hover:grayscale-0 transition duration-500 border-2 border-black"
         />
