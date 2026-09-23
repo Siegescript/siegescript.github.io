@@ -1,4 +1,12 @@
 {
+  "firstName": "Stefan Louis",
+  "lastName": "Duran",
+  "intro": "An aspiring developer who wants to build projects, write clean code, and learn new technologies.",
+  "currentWork": "DSA Notes",
+  "about": [
+    { "paragraph": "I'm a computer science graduate from the University of San Carlos with hands-on experience in software development and a foundation in C, Java, JavaScript, Python, and SQL." },
+    { "paragraph": "I aspire to be a developer who can build projects, write clean code, while also learn new technologies. Furthermore, I am eager to apply a collaborative and analytical approach to technology challenges and contribute to team success." }
+  ],
   "education": [
     {
       "institution": "University of San Carlos",

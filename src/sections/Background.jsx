@@ -2,7 +2,7 @@ import portfolioData from "../data.json";
 import portrait from "../assets/portrait.jpg";
 
 function Background() {
-    const { education, employment } = portfolioData;
+    const { about, education, employment, currentWork } = portfolioData;
 
     return (
         <section id="background" className="py-24 max-w-7xl 2xl:max-w-screen-2xl mx-auto px-8 md:px-12">
@@ -14,13 +14,10 @@ function Background() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
                 <div className="md:col-span-2 space-y-6 text-gray-300 leading-relaxed text-sm md:text-base">
-                    <p>
-                    I'm a computer science graduate from the University of San Carlos with hands-on experience in software development and a foundation in C, Java, JavaScript, Python, and SQL.
-                    </p>
-                    <p>
-                    I aspire to be a developer who can build projects, write clean code, while also learn new technologies. Furthermore, I am eager to apply a collaborative and analytical approach to technology challenges and contribute to team success.
-                    </p>
-          
+                    {about.map((item, index) => (
+                        <p key={index}>{item.paragraph}</p>
+                    ))}
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8">
                         <div>
                             <h3 className="text-lg md:text-xl font-bold text-[#cb6ce6] mb-2">&gt; education</h3>
@@ -28,7 +25,7 @@ function Background() {
                             <div key={index} className="mb-4 last:mb-0">
                                 <p className="font-bold text-white text-base md:text-lg">{item.institution}</p>
                                 <p className="text-gray-400">{item.degree}</p>
-                                <p className="text-gray-500 text-xs md:text-sm">{item.date}</p>
+                                <p className="text-gray-400 text-xs md:text-sm">{item.date}</p>
                             </div>
                             ))}
                         </div>
@@ -38,7 +35,7 @@ function Background() {
                             <div key={index} className="mb-4 last:mb-0">
                                 <p className="font-bold text-white text-base md:text-lg">{item.company}</p>
                                 <p className="text-gray-400">{item.role}</p>
-                                <p className="text-gray-500 text-xs md:text-sm">{item.date}</p>
+                                <p className="text-gray-400 text-xs md:text-sm">{item.date}</p>
                             </div>
                             ))}
                         </div>
@@ -56,7 +53,7 @@ function Background() {
                             <span className="absolute top-0 left-0 w-3 h-3 bg-cyan-400 z-10"></span>
                             <span className="absolute bottom-0 right-0 w-3 h-3 bg-pink-500 z-0"></span>
                         </div>
-                        <span>Working on: <span className="text-white">DSA Notes</span></span>
+                        <span>Working on: <span className="text-white">{currentWork}</span></span>
                     </div>
                 </div>
             </div>

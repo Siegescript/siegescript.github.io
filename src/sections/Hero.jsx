@@ -1,6 +1,9 @@
+import portfolioData from "../data.json"
 import aura from "../assets/aura.jpeg"
 
 function Hero() {
+  const { firstName, lastName, intro } = portfolioData;
+
   return (
     <section id="home" className="pt-32 pb-20 max-w-7xl 2xl:max-w-screen-2xl mx-auto px-8 md:px-12 flex flex-col-reverse md:flex-row items-center justify-between gap-16 min-h-screen">
       
@@ -8,10 +11,10 @@ function Hero() {
       <div className="max-w-2xl">
         <p className="text-[#cb6ce6] text-xl md:text-2xl mb-4">&gt; Hello, I am</p>
         <h1 className="text-4xl md:text-6xl 2xl:text-7xl font-bold text-white mb-6 leading-none tracking-wide">
-          Stefan Louis<br />Duran
+          {firstName}<br/>{lastName}
         </h1>
         <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-lg">
-          An aspiring developer who wants to build projects, write clean code, and learn new technologies.
+          {intro}
         </p>
       </div>
 
