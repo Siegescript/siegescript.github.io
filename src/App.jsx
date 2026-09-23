@@ -9,22 +9,19 @@ import Contact from './sections/Contact'
 function App() {
   return (
     <div className="relative min-h-screen bg-black overflow-x-hidden selection:bg-[#cb6ce6] selection:text-black">
-      <ParticleBackground/>
+      <ParticleBackground />
       
-      <div className="relative z-10 pointer-events-none">
-        <div className="pointer-events-auto">
+      <div className="relative z-10">
           <Navbar />
           <main className="space-y-12">
-            <Hero/>
-            <Background/>
-            <Projects/>
-            <Skills/>
-            <Contact/>
+            <Hero />
+            <Background />
+            <Projects />
+            <Skills />
+            <Contact />
           </main>
-        </div>
       </div>
     </div>
   ) 
 }
-
 export default App

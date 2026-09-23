@@ -1,5 +1,4 @@
-import { Mail } from "lucide-react";
-import { Download } from "lucide-react";
+import { Mail, Download } from "lucide-react";
 import Resume from "../assets/StefanLouis_Duran_CV.pdf";
 import data from "../data.json";
 
