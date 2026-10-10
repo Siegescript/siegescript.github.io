@@ -40,15 +40,15 @@
     },
     {
       "title": "Express.JS REST API",
-      "stack": "Express.js / Passport / Sequelize / MySQL",
+      "stack": "Express.js / Passport.js / Sequelize / MySQL",
       "description": "RESTful API template featuring request validation, session authentication, and database ORM integration.",
-      "link": "https://github.com/Siegescript/Express.js-API"
+      "link": "https://github.com/Siegescript/Expressjs-API"
     },
     {
-      "title": "Data Structures & Algorithms",
+      "title": "Data Structures & Algorithms Notes",
       "stack": "C",
-      "description": "Reference notes and implementations for core data structures, algorithms, and complexities in C.",
-      "link": "https://github.com/Siegescript/Data-Structures-and-Algorithms"
+      "description": "Reference notes and implementations for data structures, algorithms, and complexities in C.",
+      "link": "https://github.com/Siegescript/DSA-Notes"
     }
   ],
   "socialLinks": [
