@@ -32,6 +32,6 @@
     "vite": "^8.1.1"
   },
   "allowScripts": {
-    "@tsparticles/engine@4.3.2": true
+    "@tsparticles/engine@4.5.3": true
   }
 }
